@@ -1,7 +1,7 @@
 package interfaces;
 
 public class Poligono {
-    double calcularArea();
-    double calcularPerimetro();
+   // double calcularArea();
+    //double calcularPerimetro();
     
 }
