@@ -1,0 +1,30 @@
+
+Por que utilizar ArrayList em vez de um vetor?
+
+
+O ArrayList é melhor porque seu tamanho não é estipulado, 
+enquanto o vetor possui tamanho fixo. Além disso, o ArrayList possui métodos prontos 
+para adicionar e remover elementos.
+
+
+Explique por que ArrayList<int> nao compila. Corrija o código.
+
+
+O ArrayList<int> não compila porque int é um tipo primitivo 
+e os generics aceitam apenas objetos. 
+A correção é utilizar Integer.
+
+Considere Integer paginas = 320.
+
+a) Explique o que aconteceu na atribuição.
+Ocorre o autoboxing, em que o Java converte automaticamente 
+o valor int para um objeto integer.
+b) Explique o que acontece em: int x = paginas.
+Acontece o contrário da letra A, o unboxing. Ele pega o objeto integer 
+e transforma em um tipo primitivo.
+
+AnnotationsCrie uma classe contendo um método sobrescrito utilizando @Override e explique por
+que essa annotation é útil.
+
+RESPOSTA: O @Override é útil porque indica que um método está sendo sobrescrito. Ela ajuda a evitar erros, 
+pois o Java avisa caso o método não exista na classe pai ou tenha sido escrito de forma incorreta.
