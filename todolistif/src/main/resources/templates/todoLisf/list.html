@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lista de Tarefas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h1>Inserir Tarefa</h1>
+    <form method="post" action="/create">
+        <label>Tarefa:</label>
+        <input type="text" name="title" required /><br><br>
+
+        <label>Prazo:</label>
+        <input type="datetime-local" name="deadLine" required /><br><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h2>Tarefas</h2>
+    <table border="1" cellpadding="6">
+        <thead>
+            <tr>
+                <th>Tarefa</th>
+                <th>Data de Criação</th>
+                <th>Prazo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="todo : ${todos}">
+                <td th:text="${todo.title}"></td>
+                <td th:text="${todo.createdAt}"></td>
+                <td th:text="${todo.deadLine}"></td>
+                <td>
+                    <a th:href="@{/edit/{id}(id=${todo.id})}">Editar</a>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
